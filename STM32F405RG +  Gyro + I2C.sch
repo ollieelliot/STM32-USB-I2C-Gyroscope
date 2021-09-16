@@ -610,8 +610,6 @@ F 3 "" H 950 1650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1950 2000 1650 2000
-Wire Wire Line
 	950  1650 950  2000
 $Comp
 L power:GND #PWR07
@@ -676,18 +674,16 @@ Connection ~ 4550 2000
 $Comp
 L Device:Ferrite_Bead_Small FB1
 U 1 1 6146E201
-P 2900 2000
-F 0 "FB1" V 3137 2000 50  0000 C CNN
-F 1 "600 @ 100Mhz" V 3046 2000 50  0000 C CNN
-F 2 "Inductor_SMD:L_0805_2012Metric" V 2830 2000 50  0001 C CNN
-F 3 "~" H 2900 2000 50  0001 C CNN
-	1    2900 2000
+P 3150 2000
+F 0 "FB1" V 3387 2000 50  0000 C CNN
+F 1 "600 @ 100Mhz" V 3296 2000 50  0000 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" V 3080 2000 50  0001 C CNN
+F 3 "~" H 3150 2000 50  0001 C CNN
+	1    3150 2000
 	0    -1   -1   0   
 $EndComp
-Text GLabel 3250 2000 2    50   Input ~ 0
+Text GLabel 3400 2000 2    50   Input ~ 0
 BUCK_IN
-Wire Wire Line
-	3250 2000 3000 2000
 Text GLabel 4300 2000 0    50   Input ~ 0
 BUCK_IN
 $Comp
@@ -834,9 +830,6 @@ Wire Wire Line
 	2350 2000 2450 2000
 Wire Wire Line
 	2450 1800 2450 2000
-Connection ~ 2450 2000
-Wire Wire Line
-	2450 2000 2800 2000
 $Comp
 L power:+5V #PWR02
 U 1 1 6155DD6C
@@ -1489,28 +1482,6 @@ F 3 "~" V 2450 1700 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:Q_PMOS_GSD Q1
-U 1 1 61420894
-P 2150 2100
-F 0 "Q1" V 2493 2100 50  0000 C CNN
-F 1 "AO3401A" V 2402 2100 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 2350 2200 50  0001 C CNN
-F 3 "~" H 2150 2100 50  0001 C CNN
-	1    2150 2100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:Polyfuse_Small F1
-U 1 1 614159D1
-P 1550 2000
-F 0 "F1" V 1345 2000 50  0000 C CNN
-F 1 "250mA" V 1436 2000 50  0000 C CNN
-F 2 "Fuse:Fuse_1206_3216Metric" H 1600 1800 50  0001 L CNN
-F 3 "~" H 1550 2000 50  0001 C CNN
-	1    1550 2000
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:C_Small C6
 U 1 1 613B683C
 P 14100 1800
@@ -1527,7 +1498,7 @@ U 1 1 613A53A0
 P 14650 2950
 F 0 "C8" H 14742 2996 50  0000 L CNN
 F 1 "2.2nF" H 14742 2905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 14650 2950 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14650 2950 50  0001 C CNN
 F 3 "~" H 14650 2950 50  0001 C CNN
 	1    14650 2950
 	1    0    0    -1  
@@ -1538,7 +1509,7 @@ U 1 1 613AF6D6
 P 14050 2950
 F 0 "C7" H 14150 3000 50  0000 L CNN
 F 1 "100nF" H 14150 2900 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 14050 2950 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14050 2950 50  0001 C CNN
 F 3 "~" H 14050 2950 50  0001 C CNN
 	1    14050 2950
 	1    0    0    -1  
@@ -1580,8 +1551,6 @@ Wire Wire Line
 Connection ~ 6300 2250
 Wire Wire Line
 	5950 2500 6200 2500
-Wire Wire Line
-	950  2000 1450 2000
 Text Notes 1950 6600 0    39   Italic 0
 VCAP1, VCAP2 and Decoupling capacitors needs to be ceramic
 $Comp
@@ -1875,4 +1844,35 @@ Text GLabel 3700 9850 0    50   Input ~ 0
 LED
 Wire Wire Line
 	3700 9850 3800 9850
+Connection ~ 2450 2000
+Wire Wire Line
+	3250 2000 3400 2000
+Wire Wire Line
+	2450 2000 2600 2000
+Wire Wire Line
+	950  2000 1950 2000
+$Comp
+L Device:Q_PMOS_GSD Q1
+U 1 1 61420894
+P 2150 2100
+F 0 "Q1" V 2493 2100 50  0000 C CNN
+F 1 "AO3401A" V 2402 2100 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2350 2200 50  0001 C CNN
+F 3 "~" H 2150 2100 50  0001 C CNN
+	1    2150 2100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2800 2000 3050 2000
+$Comp
+L Device:Polyfuse_Small F1
+U 1 1 614B5D31
+P 2700 2000
+F 0 "F1" V 2495 2000 50  0000 C CNN
+F 1 "250mA" V 2586 2000 50  0000 C CNN
+F 2 "Fuse:Fuse_1206_3216Metric" H 2750 1800 50  0001 L CNN
+F 3 "~" H 2700 2000 50  0001 C CNN
+	1    2700 2000
+	0    1    -1   0   
+$EndComp
 $EndSCHEMATC
