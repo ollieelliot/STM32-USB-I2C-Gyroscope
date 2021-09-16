@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:STM32F405RG +  Gyro + I2C-cache
+EELAYER 29 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -623,7 +624,7 @@ F 3 "" H 2150 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L STM32F405RG-+--Gyro-+-I2C-rescue:MP2359DJ-LF-Z-OllieKiCadLibrary-STM32F405RG-+--Gyro-+-I2C-rescue-STM32F405RG-+--Gyro-+-I2C-rescue U1
+L OllieKiCadLibrary:MP2359DJ-LF-Z U1
 U 1 1 6144594D
 P 5700 1750
 F 0 "U1" H 5750 1800 50  0000 L CNN
@@ -1554,7 +1555,7 @@ Wire Wire Line
 Text Notes 1950 6600 0    39   Italic 0
 VCAP1, VCAP2 and Decoupling capacitors needs to be ceramic
 $Comp
-L Connector:USB_B_Micro J1
+L STM32F405RG-+--Gyro-+-I2C-rescue:USB_B_Micro-Connector J1
 U 1 1 6148C1CA
 P 11900 5550
 F 0 "J1" H 11957 6017 50  0000 C CNN
