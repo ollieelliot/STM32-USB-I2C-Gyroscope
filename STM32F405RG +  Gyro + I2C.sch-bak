@@ -623,7 +623,7 @@ F 3 "" H 2150 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L STM32F405RG-+--Gyro-+-I2C-rescue:MP2359DJ-LF-Z-OllieKiCadLibrary-STM32F405RG-+--Gyro-+-I2C-rescue-STM32F405RG-+--Gyro-+-I2C-rescue U1
+L OllieKiCadLibrary:MP2359DJ-LF-Z U1
 U 1 1 6144594D
 P 5700 1750
 F 0 "U1" H 5750 1800 50  0000 L CNN
@@ -843,17 +843,6 @@ F 3 "" H 2450 1550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2450 1550 2450 1600
-$Comp
-L Connector_Generic:Conn_02x05_Odd_Even J3
-U 1 1 615724AF
-P 14150 7750
-F 0 "J3" H 14250 8350 50  0000 C CNN
-F 1 "SWD_CONN" H 14250 8250 50  0000 C CNN
-F 2 "Connector_PinSocket_1.27mm:PinSocket_2x05_P1.27mm_Vertical_SMD" H 14150 7750 50  0001 C CNN
-F 3 "~" H 14150 7750 50  0001 C CNN
-	1    14150 7750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7500 10250 7400 10250
 Wire Wire Line
@@ -884,45 +873,6 @@ F 3 "" H 7800 9650 50  0001 C CNN
 	1    7800 9650
 	1    0    0    -1  
 $EndComp
-NoConn ~ 13950 7850
-$Comp
-L power:+3V3 #PWR033
-U 1 1 615BFA1D
-P 13850 7550
-F 0 "#PWR033" H 13850 7400 50  0001 C CNN
-F 1 "+3V3" H 13750 7700 50  0000 L CNN
-F 2 "" H 13850 7550 50  0001 C CNN
-F 3 "" H 13850 7550 50  0001 C CNN
-	1    13850 7550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13850 7550 13950 7550
-Wire Wire Line
-	13950 7650 13900 7650
-Wire Wire Line
-	13900 7650 13900 7750
-Wire Wire Line
-	13900 7750 13950 7750
-$Comp
-L power:GND #PWR038
-U 1 1 615EA0AC
-P 13900 8000
-F 0 "#PWR038" H 13900 7750 50  0001 C CNN
-F 1 "GND" H 13905 7827 50  0000 C CNN
-F 2 "" H 13900 8000 50  0001 C CNN
-F 3 "" H 13900 8000 50  0001 C CNN
-	1    13900 8000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13900 7750 13900 7950
-Connection ~ 13900 7750
-Wire Wire Line
-	13900 7950 13950 7950
-Connection ~ 13900 7950
-Wire Wire Line
-	13900 7950 13900 8000
 Text GLabel 5300 8250 2    50   Input ~ 0
 SWDIO
 Text GLabel 5300 8350 2    50   Input ~ 0
@@ -1017,7 +967,7 @@ $EndComp
 Text GLabel 15050 5650 2    50   Input ~ 0
 USB_CONN_D+
 $Comp
-L STM32F405RG-+--Gyro-+-I2C-rescue:USBLC6-2SC6-Power_Protection-STM32F405RG-+--Gyro-+-I2C-rescue-STM32F405RG-+--Gyro-+-I2C-rescue U3
+L Power_Protection:USBLC6-2SC6 U3
 U 1 1 613CB340
 P 14550 5550
 F 0 "U3" H 14950 6100 50  0000 C CNN
@@ -1432,42 +1382,8 @@ F 3 "~" H 7350 2950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7350 2800 7350 2850
-Text GLabel 5300 8850 2    50   Input ~ 0
-BOOT1
-Wire Wire Line
-	5300 8850 5200 8850
-Text GLabel 7350 7900 0    50   Input ~ 0
-BOOT1
-$Comp
-L power:GND #PWR039
-U 1 1 614B62CE
-P 7450 8250
-F 0 "#PWR039" H 7450 8000 50  0001 C CNN
-F 1 "GND" H 7455 8077 50  0000 C CNN
-F 2 "" H 7450 8250 50  0001 C CNN
-F 3 "" H 7450 8250 50  0001 C CNN
-	1    7450 8250
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	6750 6900 6750 8500
-$Comp
-L Device:R_Small R12
-U 1 1 614DE8D8
-P 7450 8100
-F 0 "R12" H 7300 8150 50  0000 C CNN
-F 1 "10k" H 7300 8050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 7450 8100 50  0001 C CNN
-F 3 "~" H 7450 8100 50  0001 C CNN
-	1    7450 8100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7450 7900 7450 8000
-Wire Wire Line
-	7450 8200 7450 8250
-Wire Wire Line
-	7350 7900 7450 7900
 Text Notes 6650 3550 0    39   Italic 0
 FB (Feedback voltage) needs to be between 0.790 V and 0.830 V\n\n(15k+270)/(47k+15k+270) * 3.3V = 0.80923 V
 $Comp
@@ -1554,12 +1470,12 @@ Wire Wire Line
 Text Notes 1950 6600 0    39   Italic 0
 VCAP1, VCAP2 and Decoupling capacitors needs to be ceramic
 $Comp
-L Connector:USB_B_Micro J1
+L STM32F405RG-+--Gyro-+-I2C-rescue:USB_B_Micro-Connector J1
 U 1 1 6148C1CA
 P 11900 5550
 F 0 "J1" H 11957 6017 50  0000 C CNN
 F 1 "USB_B_Micro" H 11957 5926 50  0000 C CNN
-F 2 "USB Footprint Library:USB_Micro-B_GCT_USB3076-30-A" H 12050 5500 50  0001 C CNN
+F 2 "USB Footprint Library:USB_Micro-B_Molex-105017-0001" H 12050 5500 50  0001 C CNN
 F 3 "~" H 12050 5500 50  0001 C CNN
 	1    11900 5550
 	1    0    0    -1  
@@ -1840,21 +1756,10 @@ F 3 "~" H 1700 5700 50  0001 C CNN
 	1    1700 5700
 	1    0    0    -1  
 $EndComp
-Text GLabel 3700 9850 0    50   Input ~ 0
+Text GLabel 5300 9150 2    50   Input ~ 0
 LED
 Wire Wire Line
-	3700 9850 3800 9850
-$Comp
-L Device:Polyfuse_Small F1
-U 1 1 6147A6C5
-P 2700 2000
-F 0 "F1" V 2495 2000 50  0000 C CNN
-F 1 "250mA" V 2586 2000 50  0000 C CNN
-F 2 "Fuse:Fuse_1206_3216Metric" H 2750 1800 50  0001 L CNN
-F 3 "~" H 2700 2000 50  0001 C CNN
-	1    2700 2000
-	0    1    -1   0   
-$EndComp
+	5300 9150 5200 9150
 Connection ~ 2450 2000
 Wire Wire Line
 	3250 2000 3400 2000
@@ -1875,4 +1780,77 @@ F 3 "~" H 2150 2100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2800 2000 3050 2000
+$Comp
+L Device:Polyfuse_Small F1
+U 1 1 614B5D31
+P 2700 2000
+F 0 "F1" V 2495 2000 50  0000 C CNN
+F 1 "250mA" V 2586 2000 50  0000 C CNN
+F 2 "Fuse:Fuse_1206_3216Metric" H 2750 1800 50  0001 L CNN
+F 3 "~" H 2700 2000 50  0001 C CNN
+	1    2700 2000
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	14550 5050 14550 5150
+Wire Wire Line
+	14950 5450 15050 5450
+Wire Wire Line
+	14950 5650 15050 5650
+Wire Wire Line
+	14550 5950 14550 6050
+Wire Wire Line
+	14050 5650 14150 5650
+Wire Wire Line
+	14050 5450 14150 5450
+Wire Wire Line
+	13900 7950 13900 8000
+Connection ~ 13900 7950
+Wire Wire Line
+	13900 7950 13950 7950
+Connection ~ 13900 7750
+Wire Wire Line
+	13900 7750 13900 7950
+$Comp
+L power:GND #PWR038
+U 1 1 615EA0AC
+P 13900 8000
+F 0 "#PWR038" H 13900 7750 50  0001 C CNN
+F 1 "GND" H 13905 7827 50  0000 C CNN
+F 2 "" H 13900 8000 50  0001 C CNN
+F 3 "" H 13900 8000 50  0001 C CNN
+	1    13900 8000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13900 7750 13950 7750
+Wire Wire Line
+	13900 7650 13900 7750
+Wire Wire Line
+	13950 7650 13900 7650
+Wire Wire Line
+	13850 7550 13950 7550
+$Comp
+L power:+3V3 #PWR033
+U 1 1 615BFA1D
+P 13850 7550
+F 0 "#PWR033" H 13850 7400 50  0001 C CNN
+F 1 "+3V3" H 13750 7700 50  0000 L CNN
+F 2 "" H 13850 7550 50  0001 C CNN
+F 3 "" H 13850 7550 50  0001 C CNN
+	1    13850 7550
+	1    0    0    -1  
+$EndComp
+NoConn ~ 13950 7850
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J3
+U 1 1 615724AF
+P 14150 7750
+F 0 "J3" H 14250 8350 50  0000 C CNN
+F 1 "SWD_CONN" H 14250 8250 50  0000 C CNN
+F 2 "Connector_PinSocket_1.27mm:PinSocket_2x05_P1.27mm_Vertical_SMD" H 14150 7750 50  0001 C CNN
+F 3 "~" H 14150 7750 50  0001 C CNN
+	1    14150 7750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
