@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:STM32F405RG +  Gyro + I2C-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -1471,7 +1470,7 @@ Wire Wire Line
 Text Notes 1950 6600 0    39   Italic 0
 VCAP1, VCAP2 and Decoupling capacitors needs to be ceramic
 $Comp
-L Connector:USB_B_Micro J1
+L STM32F405RG-+--Gyro-+-I2C-rescue:USB_B_Micro-Connector J1
 U 1 1 6148C1CA
 P 11900 5550
 F 0 "J1" H 11957 6017 50  0000 C CNN
@@ -1849,7 +1848,7 @@ U 1 1 615724AF
 P 14150 7750
 F 0 "J3" H 14250 8350 50  0000 C CNN
 F 1 "SWD_CONN" H 14250 8250 50  0000 C CNN
-F 2 "Connector_PinSocket_1.27mm:PinSocket_2x05_P1.27mm_Vertical_SMD" H 14150 7750 50  0001 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 14150 7750 50  0001 C CNN
 F 3 "~" H 14150 7750 50  0001 C CNN
 	1    14150 7750
 	1    0    0    -1  
