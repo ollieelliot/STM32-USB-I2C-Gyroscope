@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:STM32F405RG +  Gyro + I2C-cache
+EELAYER 29 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -131,8 +132,8 @@ $Comp
 L MCU_ST_STM32F4:STM32F405RGTx U4
 U 1 1 6138CF9E
 P 4500 8550
-F 0 "U4" H 5100 6750 50  0000 C CNN
-F 1 "STM32F405RGTx" H 5150 6650 50  0000 C CNN
+F 0 "U4" H 4500 6661 50  0000 C CNN
+F 1 "STM32F405RGTx" H 4500 6570 50  0000 C CNN
 F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 3900 6850 50  0001 R CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00037051.pdf" H 4500 8550 50  0001 C CNN
 	1    4500 8550
@@ -426,10 +427,10 @@ F 3 "" H 8750 2900 50  0001 C CNN
 $EndComp
 Text Notes 6700 10800 0    50   ~ 0
 Pull-up resistors are needed for I2C to \nensure the logical state. \nShould be in range 2k to 10k
-Text GLabel 3700 9050 0    50   Input ~ 0
+Text GLabel 3700 9950 0    50   Input ~ 0
 GYRO_INT
 Wire Wire Line
-	3700 9050 3800 9050
+	3700 9950 3800 9950
 Text GLabel 14150 2250 2    50   Input ~ 0
 GYRO_INT
 Wire Wire Line
@@ -967,7 +968,7 @@ $EndComp
 Text GLabel 15050 5650 2    50   Input ~ 0
 USB_CONN_D+
 $Comp
-L Power_Protection:USBLC6-2SC6 U3
+L STM32F405RG-+--Gyro-+-I2C-rescue:USBLC6-2SC6-Power_Protection U3
 U 1 1 613CB340
 P 14550 5550
 F 0 "U3" H 14950 6100 50  0000 C CNN
@@ -1470,7 +1471,7 @@ Wire Wire Line
 Text Notes 1950 6600 0    39   Italic 0
 VCAP1, VCAP2 and Decoupling capacitors needs to be ceramic
 $Comp
-L STM32F405RG-+--Gyro-+-I2C-rescue:USB_B_Micro-Connector J1
+L Connector:USB_B_Micro J1
 U 1 1 6148C1CA
 P 11900 5550
 F 0 "J1" H 11957 6017 50  0000 C CNN
@@ -1853,4 +1854,39 @@ F 3 "~" H 14150 7750 50  0001 C CNN
 	1    14150 7750
 	1    0    0    -1  
 $EndComp
+NoConn ~ 5200 8650
+NoConn ~ 5200 8750
+NoConn ~ 5200 8850
+NoConn ~ 5200 9050
+NoConn ~ 5200 8450
+NoConn ~ 5200 9250
+NoConn ~ 5200 9550
+NoConn ~ 5200 9850
+NoConn ~ 5200 9950
+NoConn ~ 5200 10050
+NoConn ~ 5200 10150
+NoConn ~ 3800 10150
+NoConn ~ 3800 10050
+NoConn ~ 3800 9850
+NoConn ~ 3800 9750
+NoConn ~ 3800 9650
+NoConn ~ 3800 9550
+NoConn ~ 3800 9450
+NoConn ~ 3800 9350
+NoConn ~ 3800 9250
+NoConn ~ 3800 9150
+NoConn ~ 3800 9050
+NoConn ~ 3800 8950
+NoConn ~ 3800 8850
+NoConn ~ 3800 8750
+NoConn ~ 3800 8650
+NoConn ~ 3800 8450
+NoConn ~ 5200 7950
+NoConn ~ 5200 7850
+NoConn ~ 5200 7750
+NoConn ~ 5200 7650
+NoConn ~ 5200 7550
+NoConn ~ 5200 7450
+NoConn ~ 5200 7350
+NoConn ~ -100 10000
 $EndSCHEMATC
