@@ -966,17 +966,6 @@ F 3 "" H 14150 5050 50  0001 C CNN
 $EndComp
 Text GLabel 15050 5650 2    50   Input ~ 0
 USB_CONN_D+
-$Comp
-L STM32F405RG-+--Gyro-+-I2C-rescue:USBLC6-2SC6-Power_Protection U3
-U 1 1 613CB340
-P 14550 5550
-F 0 "U3" H 14950 6100 50  0000 C CNN
-F 1 "USBLC6-2SC6" H 14950 6000 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 13800 5950 50  0001 C CNN
-F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 14750 5900 50  0001 C CNN
-	1    14550 5550
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	15900 4700 15900 6400
 Wire Notes Line
@@ -1470,7 +1459,7 @@ Wire Wire Line
 Text Notes 1950 6600 0    39   Italic 0
 VCAP1, VCAP2 and Decoupling capacitors needs to be ceramic
 $Comp
-L STM32F405RG-+--Gyro-+-I2C-rescue:USB_B_Micro-Connector J1
+L STM32F405RG-+--Gyro-+-I2C-rescue:USB_B_Micro-Connector-STM32F405RG-+--Gyro-+-I2C-rescue J1
 U 1 1 6148C1CA
 P 11900 5550
 F 0 "J1" H 11957 6017 50  0000 C CNN
@@ -1888,4 +1877,15 @@ NoConn ~ 5200 7550
 NoConn ~ 5200 7450
 NoConn ~ 5200 7350
 NoConn ~ -100 10000
+$Comp
+L Power_Protection:USBLC6-2SC6 U3
+U 1 1 613CB340
+P 14550 5550
+F 0 "U3" H 14950 6100 50  0000 C CNN
+F 1 "USBLC6-2SC6" H 14950 6000 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 13800 5950 50  0001 C CNN
+F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 14750 5900 50  0001 C CNN
+	1    14550 5550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# USB_B_Micro-Connector
+# USB_B_Micro-Connector-STM32F405RG-+--Gyro-+-I2C-rescue
 #
-DEF USB_B_Micro-Connector J 0 40 Y Y 1 F N
+DEF USB_B_Micro-Connector-STM32F405RG-+--Gyro-+-I2C-rescue J 0 40 Y Y 1 F N
 F0 "J" -200 450 50 H V L CNN
-F1 "USB_B_Micro-Connector" -200 350 50 H V L CNN
+F1 "USB_B_Micro-Connector-STM32F405RG-+--Gyro-+-I2C-rescue" -200 350 50 H V L CNN
 F2 "" 150 -50 50 H I C CNN
 F3 "" 150 -50 50 H I C CNN
 $FPLIST
